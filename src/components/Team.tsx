@@ -58,10 +58,6 @@ const Team = () => {
           ))}
         </div>
 
-        {/* Note about photos */}
-        <p className="text-center text-sm text-muted-foreground mt-8 italic">
-          Fotografie budú doplnené
-        </p>
       </div>
     </section>
   );
