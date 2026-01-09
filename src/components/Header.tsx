@@ -36,7 +36,7 @@ const Header = () => {
             <img
               src={logo}
               alt="Stephysio"
-              className="h-12 md:h-14 w-auto"
+              className="h-12 md:h-14 w-auto rounded-full"
             />
           </a>
 
