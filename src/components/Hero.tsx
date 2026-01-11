@@ -1,4 +1,5 @@
 import { ArrowRight, Phone } from "lucide-react";
+import SpineDecor from "./SpineDecor";
 
 const Hero = () => {
   return (
@@ -6,14 +7,39 @@ const Hero = () => {
       {/* Background with subtle pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-teal-light/50 via-background to-secondary/30" />
       
+      {/* Spine decoration */}
+      <SpineDecor side="right" className="hidden lg:block" />
+      
       {/* Decorative shapes */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-20 left-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-primary/3 rounded-full blur-2xl" />
+      
+      {/* Dotted pattern */}
+      <div className="absolute inset-0 opacity-30">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1" fill="currentColor" className="text-primary/20" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#dots)" />
+        </svg>
+      </div>
       
       {/* Abstract medical shapes */}
       <div className="absolute top-1/3 right-10 w-4 h-4 bg-primary/30 rounded-full hidden lg:block" />
       <div className="absolute top-1/2 right-20 w-2 h-2 bg-accent rounded-full hidden lg:block" />
       <div className="absolute bottom-1/3 right-32 w-3 h-3 bg-primary/20 rounded-full hidden lg:block" />
+      
+      {/* Decorative circles */}
+      <svg className="absolute top-32 left-10 w-24 h-24 text-primary/10 hidden md:block" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="8,4" />
+      </svg>
+      <svg className="absolute bottom-32 right-1/4 w-32 h-32 text-accent/20 hidden lg:block" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="0.5" />
+        <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="0.5" />
+      </svg>
 
       <div className="container-narrow mx-auto px-4 md:px-8 relative z-10">
         <div className="max-w-3xl">

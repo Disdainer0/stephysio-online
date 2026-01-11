@@ -20,8 +20,20 @@ const features = [
 
 const About = () => {
   return (
-    <section id="o-nas" className="section-padding bg-secondary/30">
-      <div className="container-narrow mx-auto">
+    <section id="o-nas" className="section-padding bg-secondary/30 relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute -top-20 -right-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      
+      {/* Plus pattern */}
+      <svg className="absolute top-20 right-20 w-16 h-16 text-primary/10 hidden lg:block" viewBox="0 0 40 40">
+        <path d="M20 0 L20 40 M0 20 L40 20" stroke="currentColor" strokeWidth="2" />
+      </svg>
+      <svg className="absolute bottom-20 left-20 w-12 h-12 text-accent/15 hidden lg:block" viewBox="0 0 40 40">
+        <path d="M20 0 L20 40 M0 20 L40 20" stroke="currentColor" strokeWidth="2" />
+      </svg>
+      
+      <div className="container-narrow mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left - Content */}
           <div>
