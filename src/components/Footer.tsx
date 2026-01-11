@@ -1,5 +1,3 @@
-import logo from "@/assets/stephysio-logo.png";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -7,15 +5,13 @@ const Footer = () => {
     <footer className="bg-foreground text-primary-foreground py-12">
       <div className="container-narrow mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Logo and company */}
-          <div className="flex flex-col items-center md:items-start gap-3">
-            <img
-              src={logo}
-              alt="Stephysio"
-              className="h-12 w-auto brightness-0 invert"
-            />
+          {/* Company name */}
+          <div className="flex flex-col items-center md:items-start gap-1">
+            <span className="text-xl font-heading font-semibold text-primary-foreground">
+              Stephysio
+            </span>
             <span className="text-primary-foreground/60 text-sm">
-              Stephysio s. r. o.
+              s. r. o.
             </span>
           </div>
 

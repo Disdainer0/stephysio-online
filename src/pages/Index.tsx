@@ -7,12 +7,14 @@ import BookingForm from "@/components/BookingForm";
 import OpeningHours from "@/components/OpeningHours";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import FloatingParticles from "@/components/FloatingParticles";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      <FloatingParticles />
       <Header />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <About />
         <Team />
