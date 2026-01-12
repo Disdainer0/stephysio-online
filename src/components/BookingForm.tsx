@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
+import physioBackground from "@/assets/physio-background.jpg";
+import AnimatedSection from "./AnimatedSection";
 
 const serviceOptions = [
   "Fyzioterapia",
@@ -40,10 +42,17 @@ const BookingForm = () => {
 
   if (isSubmitted) {
     return (
-      <section id="objednat" className="section-padding bg-background">
-        <div className="container-narrow mx-auto">
+      <section id="objednat" className="relative section-padding overflow-hidden">
+        {/* Background image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${physioBackground})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" />
+        
+        <div className="container-narrow mx-auto relative z-10">
           <div className="max-w-2xl mx-auto text-center">
-            <div className="card-medical py-16">
+            <div className="card-medical py-16 backdrop-blur-sm bg-card/95">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
                 <CheckCircle className="w-10 h-10 text-primary" />
               </div>
@@ -61,11 +70,22 @@ const BookingForm = () => {
   }
 
   return (
-    <section id="objednat" className="section-padding bg-background">
-      <div className="container-narrow mx-auto">
+    <section id="objednat" className="relative section-padding overflow-hidden">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${physioBackground})` }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
+      
+      {/* Decorative elements */}
+      <div className="absolute top-20 right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-20 w-32 h-32 bg-accent/10 rounded-full blur-2xl" />
+      
+      <div className="container-narrow mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left - Content */}
-          <div>
+          <AnimatedSection animation="fade-right">
             <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">
               Objednávka
             </span>
@@ -93,115 +113,117 @@ const BookingForm = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </AnimatedSection>
 
           {/* Right - Form */}
-          <div className="card-medical">
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div>
-                <label htmlFor="name" className="label-medical">
-                  Meno a priezvisko *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="input-medical"
-                  placeholder="Vaše meno"
-                />
-              </div>
+          <AnimatedSection animation="fade-left" delay={200}>
+            <div className="card-medical backdrop-blur-sm bg-card/95">
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div>
+                  <label htmlFor="name" className="label-medical">
+                    Meno a priezvisko *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="input-medical"
+                    placeholder="Vaše meno"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="phone" className="label-medical">
-                  Telefónne číslo *
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  className="input-medical"
-                  placeholder="+421 xxx xxx xxx"
-                />
-              </div>
+                <div>
+                  <label htmlFor="phone" className="label-medical">
+                    Telefónne číslo *
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    className="input-medical"
+                    placeholder="+421 xxx xxx xxx"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="email" className="label-medical">
-                  E-mail *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="input-medical"
-                  placeholder="vas@email.sk"
-                />
-              </div>
+                <div>
+                  <label htmlFor="email" className="label-medical">
+                    E-mail *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="input-medical"
+                    placeholder="vas@email.sk"
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="service" className="label-medical">
-                  Služba *
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  required
-                  className="input-medical"
+                <div>
+                  <label htmlFor="service" className="label-medical">
+                    Služba *
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    required
+                    className="input-medical"
+                  >
+                    <option value="">Vyberte službu</option>
+                    {serviceOptions.map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="label-medical">
+                    Správa (voliteľné)
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={4}
+                    className="input-medical resize-none"
+                    placeholder="Popíšte vaše ťažkosti alebo otázky..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isLoading}
+                  className="btn-primary w-full flex items-center justify-center gap-2 text-lg py-4 disabled:opacity-70"
                 >
-                  <option value="">Vyberte službu</option>
-                  {serviceOptions.map((option) => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </select>
-              </div>
+                  {isLoading ? (
+                    <span className="animate-pulse">Odosielam...</span>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      Odoslať žiadosť
+                    </>
+                  )}
+                </button>
 
-              <div>
-                <label htmlFor="message" className="label-medical">
-                  Správa (voliteľné)
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={4}
-                  className="input-medical resize-none"
-                  placeholder="Popíšte vaše ťažkosti alebo otázky..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isLoading}
-                className="btn-primary w-full flex items-center justify-center gap-2 text-lg py-4 disabled:opacity-70"
-              >
-                {isLoading ? (
-                  <span className="animate-pulse">Odosielam...</span>
-                ) : (
-                  <>
-                    <Send className="w-5 h-5" />
-                    Odoslať žiadosť
-                  </>
-                )}
-              </button>
-
-              <p className="text-xs text-muted-foreground text-center">
-                Odoslaním formulára súhlasíte so spracovaním osobných údajov.
-              </p>
-            </form>
-          </div>
+                <p className="text-xs text-muted-foreground text-center">
+                  Odoslaním formulára súhlasíte so spracovaním osobných údajov.
+                </p>
+              </form>
+            </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

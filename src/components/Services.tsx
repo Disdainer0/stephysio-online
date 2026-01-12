@@ -1,4 +1,5 @@
 import { Activity, Bone, Dumbbell, HeartPulse, Shield } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 
 const services = [
   {
@@ -51,7 +52,7 @@ const Services = () => {
       
       <div className="container-narrow mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">
             Naše služby
           </span>
@@ -62,34 +63,37 @@ const Services = () => {
             Ponúkame široké spektrum fyzioterapeutických služieb 
             prispôsobených vašim individuálnym potrebám.
           </p>
-        </div>
+        </AnimatedSection>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="card-medical group cursor-pointer"
+            <AnimatedSection 
+              key={index} 
+              animation="scale" 
+              delay={index * 100}
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors duration-300">
-                <service.icon className="w-7 h-7 text-primary" />
+              <div className="card-medical group cursor-pointer h-full">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors duration-300">
+                  <service.icon className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-serif font-semibold text-xl text-foreground mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="font-serif font-semibold text-xl text-foreground mb-3">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
+        <AnimatedSection className="text-center mt-12" delay={500}>
           <a href="#objednat" className="btn-primary inline-flex items-center gap-2 text-lg px-8 py-4">
             Objednať sa na vyšetrenie
           </a>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );

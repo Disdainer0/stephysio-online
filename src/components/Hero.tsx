@@ -1,14 +1,10 @@
 import { ArrowRight, Phone } from "lucide-react";
-import SpineDecor from "./SpineDecor";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
       {/* Background with subtle pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-teal-light/50 via-background to-secondary/30" />
-      
-      {/* Spine decoration */}
-      <SpineDecor side="right" className="hidden lg:block" />
       
       {/* Decorative shapes */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
