@@ -1,4 +1,5 @@
 import { CheckCircle, Heart, Stethoscope, Users } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
 
 const features = [
   {
@@ -36,7 +37,7 @@ const About = () => {
       <div className="container-narrow mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left - Content */}
-          <div>
+          <AnimatedSection animation="fade-right">
             <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">
               O našej klinike
             </span>
@@ -67,27 +68,30 @@ const About = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </AnimatedSection>
 
           {/* Right - Feature Cards */}
           <div className="grid gap-6">
             {features.map((feature, index) => (
-              <div
-                key={index}
-                className="card-medical flex items-start gap-5"
+              <AnimatedSection 
+                key={index} 
+                animation="fade-left" 
+                delay={index * 150}
               >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <feature.icon className="w-7 h-7 text-primary" />
+                <div className="card-medical flex items-start gap-5">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <feature.icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-serif font-semibold text-xl text-foreground mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-serif font-semibold text-xl text-foreground mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
