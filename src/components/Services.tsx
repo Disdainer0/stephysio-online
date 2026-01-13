@@ -58,9 +58,6 @@ const Services = () => {
       </svg>
       
       {/* Additional decorative elements */}
-      <svg className="absolute top-1/3 left-5 w-16 h-16 text-primary/8 hidden lg:block" viewBox="0 0 100 100">
-        <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" fill="none" stroke="currentColor" strokeWidth="0.5" />
-      </svg>
       <svg className="absolute bottom-1/4 right-1/3 w-12 h-12 text-accent/10 hidden md:block" viewBox="0 0 100 100">
         <rect x="10" y="10" width="80" height="80" fill="none" stroke="currentColor" strokeWidth="0.5" transform="rotate(45 50 50)" />
       </svg>
