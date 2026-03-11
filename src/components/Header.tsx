@@ -21,19 +21,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (!isMobileMenuOpen) {
-      document.body.style.overflow = "";
-      return;
-    }
-
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isMobileMenuOpen]);
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -89,14 +76,8 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 z-[60] animate-fade-in">
-            <button
-              className="absolute inset-0 bg-foreground/35 backdrop-blur-sm"
-              onClick={() => setIsMobileMenuOpen(false)}
-              aria-label="Close menu overlay"
-            />
-
-            <div className="relative ml-auto flex h-full w-full max-w-sm flex-col bg-card shadow-2xl border-l border-border/60">
+          <div className="md:hidden fixed inset-0 z-[60] pointer-events-none animate-fade-in">
+            <div className="pointer-events-auto absolute top-0 right-0 flex h-full w-1/2 min-w-[180px] flex-col bg-card/95 backdrop-blur-md shadow-2xl border-l border-border/60">
               <div className="flex items-center justify-between px-4 py-4 border-b border-border/40">
                 <a href="#" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                   <img src={logo} alt="Stephysio" className="h-12 w-auto rounded-full" />
