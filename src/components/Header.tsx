@@ -76,14 +76,26 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-card/98 backdrop-blur-lg shadow-medium border-t border-border animate-fade-in">
-            <div className="flex flex-col p-6 gap-4">
+          <div className="md:hidden fixed top-0 left-0 right-0 bottom-0 z-[60] bg-card/98 backdrop-blur-lg animate-fade-in">
+            <div className="flex items-center justify-between px-4 py-4">
+              <a href="#" className="flex items-center gap-2">
+                <img src={logo} alt="Stephysio" className="h-12 w-auto rounded-full" />
+              </a>
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-2 text-foreground"
+                aria-label="Close menu"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            <div className="flex flex-col px-6 pt-8 gap-6">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-foreground/80 hover:text-primary font-medium py-2 transition-colors"
+                  className="text-foreground/80 hover:text-primary font-medium text-lg py-2 transition-colors border-b border-border/30"
                 >
                   {link.label}
                 </a>
@@ -91,7 +103,7 @@ const Header = () => {
               <a
                 href="#objednat"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="btn-primary text-center mt-2"
+                className="btn-primary text-center mt-4"
               >
                 Objednať sa
               </a>
