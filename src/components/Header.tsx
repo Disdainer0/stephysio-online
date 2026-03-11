@@ -21,6 +21,19 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!isMobileMenuOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -76,37 +89,46 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden fixed top-0 left-0 right-0 bottom-0 z-[60] bg-card/98 backdrop-blur-lg animate-fade-in">
-            <div className="flex items-center justify-between px-4 py-4">
-              <a href="#" className="flex items-center gap-2">
-                <img src={logo} alt="Stephysio" className="h-12 w-auto rounded-full" />
-              </a>
-              <button
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 text-foreground"
-                aria-label="Close menu"
-              >
-                <X className="w-6 h-6" />
-              </button>
-            </div>
-            <div className="flex flex-col px-6 pt-8 gap-6">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-foreground/80 hover:text-primary font-medium text-lg py-2 transition-colors border-b border-border/30"
-                >
-                  {link.label}
+          <div className="md:hidden fixed inset-0 z-[60] animate-fade-in">
+            <button
+              className="absolute inset-0 bg-foreground/35 backdrop-blur-sm"
+              onClick={() => setIsMobileMenuOpen(false)}
+              aria-label="Close menu overlay"
+            />
+
+            <div className="relative ml-auto flex h-full w-full max-w-sm flex-col bg-card shadow-2xl border-l border-border/60">
+              <div className="flex items-center justify-between px-4 py-4 border-b border-border/40">
+                <a href="#" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                  <img src={logo} alt="Stephysio" className="h-12 w-auto rounded-full" />
                 </a>
-              ))}
-              <a
-                href="#objednat"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="btn-primary text-center mt-4"
-              >
-                Objednať sa
-              </a>
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="p-2 text-foreground"
+                  aria-label="Close menu"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              <div className="flex flex-col px-6 pt-8 gap-6">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-foreground/80 hover:text-primary font-medium text-lg py-2 transition-colors border-b border-border/30"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+                <a
+                  href="#objednat"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="btn-primary text-center mt-4"
+                >
+                  Objednať sa
+                </a>
+              </div>
             </div>
           </div>
         )}
