@@ -29,8 +29,8 @@ const Team = () => {
             Odborníci, ktorým môžete dôverovať
           </h2>
           <p className="text-muted-foreground text-lg">
-            Náš tím tvorí skúsených fyzioterapeutov s dlhoročnou praxou 
-            a osobným prístupom ku každému pacientovi.
+            Náš tím tvoria skúsení fyzioterapeuti s dlhoročnou praxou 
+            a individuálnym prístupom ku každému pacientovi.
           </p>
         </AnimatedSection>
 
