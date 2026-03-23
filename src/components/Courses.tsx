@@ -1,3 +1,4 @@
+import { useState } from "react";
 import AnimatedSection from "./AnimatedSection";
 
 type YearCourses = {
@@ -92,7 +93,18 @@ const therapistCourses: TherapistCourses[] = [
   },
 ];
 
+const VISIBLE_YEARS_COUNT = 3;
+
 const Courses = () => {
+  const [expandedCards, setExpandedCards] = useState<Record<string, boolean>>({});
+
+  const toggleCard = (name: string) => {
+    setExpandedCards((prev) => ({
+      ...prev,
+      [name]: !prev[name],
+    }));
+  };
+
   return (
     <section id="kurzy" className="section-padding bg-secondary/20">
       <div className="container-narrow mx-auto">
@@ -116,29 +128,88 @@ const Courses = () => {
               animation="fade-up"
               delay={therapistIndex * 150}
             >
-              <div className="card-medical h-full">
+              <div className="card-medical">
                 <h3 className="font-serif font-semibold text-2xl text-foreground mb-6">
                   {therapist.name}
                 </h3>
 
                 <div className="space-y-6">
-                  {therapist.years.map((yearGroup) => (
+                  {therapist.years
+                    .slice(0, VISIBLE_YEARS_COUNT)
+                    .map((yearGroup) => (
                     <div key={`${therapist.name}-${yearGroup.year}`}>
-                      <h4 className="text-primary font-semibold text-base mb-3">
+                      <h4 className="text-[#3D9988] font-bold text-xl leading-none mb-3">
                         {yearGroup.year}
                       </h4>
                       <ul className="space-y-2">
                         {yearGroup.courses.map((course) => (
                           <li
                             key={`${therapist.name}-${yearGroup.year}-${course}`}
-                            className="text-muted-foreground leading-relaxed"
+                            className="text-muted-foreground leading-relaxed flex items-start gap-3"
                           >
-                            {course}
+                            <span
+                              className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 bg-[#3D9988]"
+                              aria-hidden="true"
+                            />
+                            <span>{course}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                   ))}
+
+                  <div
+                    className={`overflow-hidden transition-all duration-500 ease-out ${
+                      expandedCards[therapist.name]
+                        ? "max-h-[120rem] opacity-100"
+                        : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <div className="space-y-6 pt-6">
+                      {therapist.years
+                        .slice(VISIBLE_YEARS_COUNT)
+                        .map((yearGroup) => (
+                        <div key={`${therapist.name}-${yearGroup.year}`}>
+                          <h4 className="text-[#3D9988] font-bold text-xl leading-none mb-3">
+                            {yearGroup.year}
+                          </h4>
+                          <ul className="space-y-2">
+                            {yearGroup.courses.map((course) => (
+                              <li
+                                key={`${therapist.name}-${yearGroup.year}-${course}`}
+                                className="text-muted-foreground leading-relaxed flex items-start gap-3"
+                              >
+                                <span
+                                  className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 bg-[#3D9988]"
+                                  aria-hidden="true"
+                                />
+                                <span>{course}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {therapist.years.length > VISIBLE_YEARS_COUNT && (
+                    <button
+                      type="button"
+                      onClick={() => toggleCard(therapist.name)}
+                      className="inline-flex items-center gap-2 text-[#3D9988] font-semibold hover:text-primary transition-colors duration-200"
+                      aria-expanded={!!expandedCards[therapist.name]}
+                    >
+                      {expandedCards[therapist.name] ? "Menej" : "Viac"}
+                      <span
+                        className={`text-sm transition-transform duration-300 ${
+                          expandedCards[therapist.name] ? "rotate-180" : "rotate-0"
+                        }`}
+                        aria-hidden="true"
+                      >
+                        ▾
+                      </span>
+                    </button>
+                  )}
                 </div>
               </div>
             </AnimatedSection>
