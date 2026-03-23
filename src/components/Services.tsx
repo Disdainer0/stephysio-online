@@ -4,40 +4,35 @@ import AnimatedSection from "./AnimatedSection";
 const services = [
   {
     icon: HeartPulse,
-    title: "Fyzioterapia",
+    title: "Fyzioterapeutické vyšetrenie",
     description:
-      "Komplexná fyzioterapeutická starostlivosť zameraná na obnovenie správnej funkcie pohybového aparátu.",
+      "Komplexné vyšetrenie pohybového aparátu, analýza držania tela a pohybových stereotypov. Na základe vyšetrenia nastavíme individuálny rehabilitačný plán.",
   },
   {
     icon: Bone,
-    title: "Rehabilitácia pohybového aparátu",
+    title: "Rehabilitácia po úrazoch a operáciách",
     description:
-      "Odborná rehabilitácia po úrazoch, operáciách a pri chronických problémoch.",
+      "Rehabilitácia po športových úrazoch, operáciách kolena, ramena alebo chrbtice. Cieľom je bezpečný návrat k bežným aktivitám a športu.",
   },
   {
     icon: Activity,
-    title: "Terapia chrbtice",
+    title: "Fyzioterapia bolestí chrbta",
     description:
-      "Špecializovaná liečba bolestí chrbta, výhrezov platničiek a porúch držania tela.",
+      "Terapia pri bolestiach krčnej, hrudnej a driekovej chrbtice, blokádach chrbtice, výhřezoch platničiek a poruchách držania tela.",
   },
   {
     icon: Dumbbell,
     title: "Individuálne cvičenia",
     description:
-      "Cvičebné programy na mieru pre posilnenie, stabilizáciu a prevenciu opakovaných problémov.",
+      "Individuálne cvičenia zamerané na stabilitu, mobilitu a správnu funkciu svalov. Program je prispôsobený potrebám každého pacienta.",
   },
   {
     icon: Shield,
-    title: "Prevencia bolesti a preťaženia",
+    title: "Športová fyzioterapia",
     description:
-      "Preventívne programy a poradenstvo pre aktívny život bez bolesti.",
+      "Prevencia zranení, liečba preťaženia svalov a kĺbov a optimalizácia pohybových stereotypov u športovcov.",
   },
-  {
-    icon: Hand,
-    title: "Manuálna terapia",
-    description:
-      "Špeciálne manuálne techniky na uvoľnenie svalov, mobilizáciu kĺbov a zmiernenie bolesti.",
-  },
+  
 ];
 
 const Services = () => {
