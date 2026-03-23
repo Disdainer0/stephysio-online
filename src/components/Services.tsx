@@ -34,6 +34,22 @@ const services = [
   },
 ];
 
+const getServiceColumnClass = (index: number) => {
+  const hasTwoItemsInLastRow = services.length % 3 === 2;
+  const isSecondToLast = index === services.length - 2;
+  const isLast = index === services.length - 1;
+
+  if (hasTwoItemsInLastRow && isSecondToLast) {
+    return "md:col-span-1 lg:col-span-4 lg:col-start-3";
+  }
+
+  if (hasTwoItemsInLastRow && isLast) {
+    return "md:col-span-1 lg:col-span-4 lg:col-start-7";
+  }
+
+  return "md:col-span-1 lg:col-span-4";
+};
+
 const Services = () => {
   return (
     <section id="sluzby" className="section-padding bg-secondary/30 relative overflow-hidden">
@@ -80,12 +96,13 @@ const Services = () => {
         </AnimatedSection>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
           {services.map((service, index) => (
             <AnimatedSection 
               key={index} 
               animation="scale" 
               delay={index * 100}
+              className={getServiceColumnClass(index)}
             >
               <div className="card-medical group cursor-pointer h-full">
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors duration-300">
