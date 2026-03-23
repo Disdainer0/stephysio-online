@@ -9,22 +9,16 @@ const services = [
       "Komplexné vyšetrenie pohybového aparátu, analýza držania tela a pohybových stereotypov. Na základe vyšetrenia nastavíme individuálny rehabilitačný plán.",
   },
   {
-    icon: Bone,
-    title: "Rehabilitácia po úrazoch a operáciách",
-    description:
-      "Rehabilitácia po športových úrazoch, operáciách kolena, ramena alebo chrbtice. Cieľom je bezpečný návrat k bežným aktivitám a športu.",
-  },
-  {
     icon: Activity,
     title: "Fyzioterapia bolestí chrbta",
     description:
       "Terapia pri bolestiach krčnej, hrudnej a driekovej chrbtice, blokádach chrbtice, výhřezoch platničiek a poruchách držania tela.",
   },
   {
-    icon: Dumbbell,
-    title: "Individuálne cvičenia",
+    icon: Bone,
+    title: "Rehabilitácia po úrazoch a operáciách",
     description:
-      "Individuálne cvičenia zamerané na stabilitu, mobilitu a správnu funkciu svalov. Program je prispôsobený potrebám každého pacienta.",
+      "Rehabilitácia po športových úrazoch, operáciách kolena, ramena alebo chrbtice. Cieľom je bezpečný návrat k bežným aktivitám a športu.",
   },
   {
     icon: Shield,
@@ -32,7 +26,12 @@ const services = [
     description:
       "Prevencia zranení, liečba preťaženia svalov a kĺbov a optimalizácia pohybových stereotypov u športovcov.",
   },
-  
+  {
+    icon: Dumbbell,
+    title: "Individuálne cvičenia",
+    description:
+      "Individuálne cvičenia zamerané na stabilitu, mobilitu a správnu funkciu svalov. Program je prispôsobený potrebám každého pacienta.",
+  },
 ];
 
 const Services = () => {
