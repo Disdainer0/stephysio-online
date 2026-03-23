@@ -6,7 +6,7 @@ const teamMembers = [
     name: "PhDr. Simona Nosáľová",
     title: "Fyzioterapeutka",
     description:
-      "Hlavný fyzioterapeut, špecialista, zakladateľ Stephysio a odborný garant.",
+      "Hlavný fyzioterapeut, špecialista, zakladateľ Stephysio a odborný garant.                                          ",
   },
   {
     name: "Mgr. Michal Sopiak",
