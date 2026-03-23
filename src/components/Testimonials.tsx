@@ -45,12 +45,6 @@ const testimonials: Testimonial[] = [
     date: "Pred 7 mesiacmi",
     text: "Perfektný prístup, odbornosť a čistý priestor. Vrelo odporúčam.",
   },
-  {
-    name: "Petra Filova",
-    rating: 5,
-    date: "Pred 11 mesiacmi",
-    text: "Profesionálny a ľudský prístup a príjemné prostredie.",
-  },
 ];
 
 const GOOGLE_MAPS_URL = "https://share.google/UlNQ8GHJ8cgSCHNjc";

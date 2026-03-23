@@ -5,7 +5,9 @@ import logo from "@/assets/stephysio-logo.png";
 const navLinks = [
   { href: "#o-nas", label: "O nás" },
   { href: "#tim", label: "Náš tím" },
+  { href: "#kurzy", label: "Kurzy" },
   { href: "#sluzby", label: "Služby" },
+  { href: "#recenzie", label: "Recenzie" },
   { href: "#kontakt", label: "Kontakt" },
 ];
 

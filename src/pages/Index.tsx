@@ -19,6 +19,7 @@ const Index = () => {
       <Header />
       <main className="relative z-10">
         <Hero />
+        <SectionDivider />
         <Testimonials />
         <About />
         <Team />
