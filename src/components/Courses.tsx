@@ -106,7 +106,7 @@ const Courses = () => {
   };
 
   return (
-    <section id="kurzy" className="section-padding bg-secondary/20">
+    <section id="kurzy" className="section-padding pt-8 md:pt-10 lg:pt-12 bg-secondary/20">
       <div className="container-narrow mx-auto">
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">

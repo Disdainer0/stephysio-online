@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Testimonials from "@/components/Testimonials";
 import About from "@/components/About";
 import Team from "@/components/Team";
 import SectionDivider from "@/components/SectionDivider";
@@ -18,6 +19,7 @@ const Index = () => {
       <Header />
       <main className="relative z-10">
         <Hero />
+        <Testimonials />
         <About />
         <Team />
         <SectionDivider />
