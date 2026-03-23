@@ -2,6 +2,13 @@ import { MapPin, Phone, Mail } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 const Contact = () => {
+  const emailAddress = "step.fyzio@gmail.com";
+  const mailtoHref = `mailto:${emailAddress}`;
+
+  const openEmailClient = () => {
+    window.location.href = mailtoHref;
+  };
+
   return (
     <section id="kontakt" className="section-padding bg-secondary/30">
       <div className="container-narrow mx-auto">
@@ -78,10 +85,11 @@ const Contact = () => {
                     E-mail
                   </h3>
                   <a
-                    href="mailto:step.fyzio@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    href={mailtoHref}
+                    onClick={openEmailClient}
+                    className="inline-block text-muted-foreground hover:text-primary transition-colors"
                   >
-                    step.fyzio@gmail.com
+                    {emailAddress}
                   </a>
                 </div>
               </div>
@@ -98,7 +106,8 @@ const Contact = () => {
                   Zavolať
                 </a>
                 <a
-                  href="mailto:step.fyzio@gmail.com"
+                  href={mailtoHref}
+                  onClick={openEmailClient}
                   className="btn-secondary flex-1 inline-flex items-center justify-center gap-2"
                 >
                   <Mail className="w-5 h-5" />

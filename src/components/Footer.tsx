@@ -20,8 +20,14 @@ const Footer = () => {
             <a href="#o-nas" className="hover:text-primary-foreground transition-colors">
               O nás
             </a>
+            <a href="#kurzy" className="hover:text-primary-foreground transition-colors">
+              Kurzy
+            </a>
             <a href="#sluzby" className="hover:text-primary-foreground transition-colors">
               Služby
+            </a>
+            <a href="#recenzie" className="hover:text-primary-foreground transition-colors">
+              Recenzie
             </a>
             <a href="#kontakt" className="hover:text-primary-foreground transition-colors">
               Kontakt
@@ -39,6 +45,17 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/50">
           <p>© {currentYear} Stephysio s. r. o. Všetky práva vyhradené.</p>
           <p>Odborná fyzioterapia v Košiciach</p>
+          <p>
+            Web spravila{" "}
+            <a
+              href="https://adkommerce.com"
+              target="_blank"
+              rel="noreferrer"
+              className="text-primary-foreground/80 hover:text-primary-foreground underline underline-offset-4 transition-colors"
+            >
+              AdKommerce
+            </a>
+          </p>
         </div>
       </div>
     </footer>
