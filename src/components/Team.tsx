@@ -6,7 +6,7 @@ const teamMembers = [
     name: "PhDr. Simona Nosáľová",
     title: "Fyzioterapeutka",
     description:
-      "Špecializuje sa na terapiu chrbtice a rehabilitáciu pohybového aparátu. Individuálny prístup ku každému pacientovi.",
+      "Hlavný fyzioterapeut, špecialista, zakladateľ Stephysio a odborný garant.",
   },
   {
     name: "Mgr. Michal Sopiak",
