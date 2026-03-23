@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { User } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 type YearCourses = {
@@ -129,9 +130,14 @@ const Courses = () => {
               delay={therapistIndex * 150}
             >
               <div className="card-medical">
-                <h3 className="font-serif font-semibold text-2xl text-foreground mb-6">
-                  {therapist.name}
-                </h3>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-teal-light border border-primary/15 flex items-center justify-center flex-shrink-0">
+                    <User className="w-5 h-5 text-primary/60" />
+                  </div>
+                  <h3 className="font-serif font-semibold text-2xl text-foreground leading-tight">
+                    {therapist.name}
+                  </h3>
+                </div>
 
                 <div className="space-y-6">
                   {therapist.years
