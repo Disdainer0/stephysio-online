@@ -47,7 +47,8 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            Odborná starostlivosť, ktorej prioritou je váš pohyb bez bolesti.
+            Odborná starostlivosť, ktorej prioritou je váš{" "}
+            <span className="text-[#3D9988]">pohyb bez bolesti</span>.
           </h1>
 
           {/* Subheadline */}
