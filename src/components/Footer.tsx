@@ -46,7 +46,7 @@ const Footer = () => {
           <p>© {currentYear} Stephysio s. r. o. Všetky práva vyhradené.</p>
           <p>Odborná fyzioterapia v Košiciach</p>
           <p>
-            Web spravila{" "}
+            Web by{" "}
             <a
               href="https://adkommerce.com"
               target="_blank"
