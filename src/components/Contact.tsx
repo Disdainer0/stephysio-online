@@ -78,10 +78,10 @@ const Contact = () => {
                     E-mail
                   </h3>
                   <a
-                    href="mailto:stephysio@gmail.com"
+                    href="mailto:step.fyzio@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    stephysio@gmail.com
+                    step.fyzio@gmail.com
                   </a>
                 </div>
               </div>
@@ -98,7 +98,7 @@ const Contact = () => {
                   Zavolať
                 </a>
                 <a
-                  href="mailto:stephysio@gmail.com"
+                  href="mailto:step.fyzio@gmail.com"
                   className="btn-secondary flex-1 inline-flex items-center justify-center gap-2"
                 >
                   <Mail className="w-5 h-5" />
