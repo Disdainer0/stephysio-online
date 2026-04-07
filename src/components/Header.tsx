@@ -7,6 +7,7 @@ const navLinks = [
   { href: "#tim", label: "Náš tím" },
   { href: "#kurzy", label: "Kurzy" },
   { href: "#sluzby", label: "Služby" },
+  { href: "#metody", label: "Metódy" },
   { href: "#recenzie", label: "Recenzie" },
   { href: "#kontakt", label: "Kontakt" },
 ];

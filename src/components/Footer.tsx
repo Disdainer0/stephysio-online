@@ -26,6 +26,9 @@ const Footer = () => {
             <a href="#sluzby" className="hover:text-primary-foreground transition-colors">
               Služby
             </a>
+            <a href="#metody" className="hover:text-primary-foreground transition-colors">
+              Metódy
+            </a>
             <a href="#recenzie" className="hover:text-primary-foreground transition-colors">
               Recenzie
             </a>

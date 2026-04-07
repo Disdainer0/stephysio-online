@@ -27,6 +27,7 @@ const Index = () => {
         <SectionDivider />
         <Courses />
         <Services />
+        <SectionDivider />
         <Methods />
         <BookingForm />
         <OpeningHours />
