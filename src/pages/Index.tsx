@@ -6,6 +6,7 @@ import Team from "@/components/Team";
 import SectionDivider from "@/components/SectionDivider";
 import Courses from "@/components/Courses";
 import Services from "@/components/Services";
+import Methods from "@/components/Methods";
 import BookingForm from "@/components/BookingForm";
 import OpeningHours from "@/components/OpeningHours";
 import Contact from "@/components/Contact";
@@ -26,6 +27,7 @@ const Index = () => {
         <SectionDivider />
         <Courses />
         <Services />
+        <Methods />
         <BookingForm />
         <OpeningHours />
         <Contact />
