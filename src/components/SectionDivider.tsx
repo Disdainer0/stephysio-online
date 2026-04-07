@@ -4,7 +4,7 @@ const SectionDivider = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.35, triggerOnce: true });
 
   return (
-    <div className="py-8 md:py-10" aria-hidden="true">
+    <div className="py-8 md:py-10 bg-gradient-to-b from-secondary/10 to-transparent" aria-hidden="true">
       <div className="container-narrow mx-auto flex justify-center">
         <div ref={ref} className="w-full flex justify-center">
           <div className="relative w-[70%] md:w-[56%] h-px bg-border/20 overflow-visible">
