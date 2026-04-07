@@ -7,9 +7,9 @@ const SectionDivider = () => {
     <div className="py-8 md:py-10" aria-hidden="true">
       <div className="container-narrow mx-auto flex justify-center">
         <div ref={ref} className="w-full flex justify-center">
-          <div className="relative w-[70%] md:w-[56%] h-px bg-border/70 overflow-visible">
+          <div className="relative w-[70%] md:w-[56%] h-px bg-border/20 overflow-visible">
             <span
-              className={`absolute inset-y-0 left-0 bg-border origin-left transition-transform duration-700 ease-out ${
+              className={`absolute inset-y-0 left-0 bg-border/20 origin-left transition-transform duration-700 ease-out ${
                 isVisible ? "scale-x-100" : "scale-x-0"
               }`}
               style={{ right: 0 }}
