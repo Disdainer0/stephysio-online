@@ -12,7 +12,7 @@ const services = [
     icon: Activity,
     title: "Fyzioterapia bolestí chrbta",
     description:
-      "Terapia pri bolestiach krčnej, hrudnej a driekovej chrbtice, blokádach chrbtice, výhřezoch platničiek a poruchách držania tela.",
+      "Terapia pri bolestiach krčnej, hrudnej a driekovej chrbtice, blokádach chrbtice, výhrezoch platničiek a poruchách držania tela.",
   },
   {
     icon: Bone,

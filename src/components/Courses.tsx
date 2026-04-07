@@ -31,7 +31,7 @@ const therapistCourses: TherapistCourses[] = [
           "Kompenzačné cvičenia v športe",
           "Kurz manuálnej terapie hrudníka, rebier a šije",
           "Diagnostické a mobilizačné techniky funkčných patológií pohybového aparátu v globálnom kontexte",
-          "Rehabilitácia pacientov s vertebrálnymi poruchami",
+          "Rehabilitace pacientů s vestibulárními poruchami",
         ],
       },
       {
@@ -41,22 +41,22 @@ const therapistCourses: TherapistCourses[] = [
       {
         year: "2022",
         courses: [
-          "Komplexná terapia trigger pointov a globálna recipročná svalová inhibícia",
+          "Komplexní terapie trigger pointů a globální reciproční svalová inhibice",
           "Manuálna terapia bolestivých lokálnych stavov",
-          "Zväčša kombinované techniky",
+          "Ruské kombinované techniky",
         ],
       },
       {
         year: "2018",
-        courses: ["Senzomotorická stimulácia a stabilizácia hybného systému"],
+        courses: ["Senzomotorická stimulace a stabilizace hybného systému"],
       },
       {
         year: "2017",
-        courses: ["Diagnostika a kinezioterapia u idiopatickej skoliózy u detí a dospelých"],
+        courses: ["Diagnostika a kinezioterapie u idiopatickej skoliózy u detí a dospelých"],
       },
       {
         year: "2016",
-        courses: ["Kineziologický taping I."],
+        courses: ["Kineziology Taping I."],
       },
     ],
   },
@@ -65,17 +65,17 @@ const therapistCourses: TherapistCourses[] = [
     years: [
       {
         year: "2026",
-        courses: ["Komplexná neuromuskulárna resiliancia (KNR)"],
+        courses: ["Komplexní neuromuskulární resilience (KNR)"],
       },
       {
         year: "2025",
-        courses: ["Manuálne techniky - terapia mäkkých tkanív"],
+        courses: ["Manuálne techniky – terapia mäkkých tkanív"],
       },
       {
         year: "2023",
         courses: [
           "PainCoaching",
-          "Rehabilitácia bolestí zad a návrat do výkonnostného tréningu",
+          "(P)Rehabilitáce bolestí zad a návrat do výkonu/tréningu",
         ],
       },
       {
