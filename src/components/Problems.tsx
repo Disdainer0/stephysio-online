@@ -46,7 +46,7 @@ const Problems = () => {
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 md:mb-20">
           {problemCards.map((card, index) => (
             <AnimatedSection key={card.title} animation="fade-up" delay={index * 100}>
               <article className="card-medical h-full">
