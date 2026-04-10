@@ -128,9 +128,8 @@ const Courses = () => {
               key={therapist.name}
               animation="fade-up"
               delay={therapistIndex * 150}
-              className="h-full"
             >
-              <div className="card-medical h-full flex flex-col">
+              <div className="card-medical">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-teal-light border border-primary/15 flex items-center justify-center flex-shrink-0">
                     <User className="w-5 h-5 text-primary/60" />
@@ -140,7 +139,7 @@ const Courses = () => {
                   </h3>
                 </div>
 
-                <div className="space-y-6 flex-1 flex flex-col">
+                <div className="space-y-6">
                   {therapist.years
                     .slice(0, VISIBLE_YEARS_COUNT)
                     .map((yearGroup) => (
@@ -203,7 +202,7 @@ const Courses = () => {
                     <button
                       type="button"
                       onClick={() => toggleCard(therapist.name)}
-                      className="inline-flex items-center gap-2 text-[#3D9988] font-semibold hover:text-primary transition-colors duration-200 mt-auto"
+                      className="inline-flex items-center gap-2 text-[#3D9988] font-semibold hover:text-primary transition-colors duration-200"
                       aria-expanded={!!expandedCards[therapist.name]}
                     >
                       {expandedCards[therapist.name] ? "Menej" : "Viac"}

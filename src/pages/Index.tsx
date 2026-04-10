@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Problems from "@/components/Problems";
 import Testimonials from "@/components/Testimonials";
-import InterSectionDecor from "@/components/InterSectionDecor";
 import About from "@/components/About";
 import Team from "@/components/Team";
 import Courses from "@/components/Courses";
@@ -21,20 +20,14 @@ const Index = () => {
       <Header />
       <main className="relative z-10">
         <Hero />
-        <InterSectionDecor align="right" hue="primary" />
         <Problems />
-        <InterSectionDecor align="left" hue="accent" />
         <Testimonials />
-        <InterSectionDecor align="right" hue="accent" />
         <About />
         <Team />
-        <InterSectionDecor align="left" hue="primary" />
         <Courses />
         <Services />
-        <InterSectionDecor align="right" hue="primary" />
         <Methods />
         <BookingForm />
-        <InterSectionDecor align="left" hue="accent" />
         <OpeningHours />
         <Contact />
       </main>
