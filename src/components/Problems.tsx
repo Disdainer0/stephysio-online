@@ -37,7 +37,7 @@ const Problems = () => {
       <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
 
       <div className="container-narrow mx-auto relative z-10">
-        <AnimatedSection className="text-center max-w-3xl mx-auto mb-12">
+        <AnimatedSection className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground leading-tight mb-5">
             Problémy, s ktorými vám vieme pomôcť
           </h2>
