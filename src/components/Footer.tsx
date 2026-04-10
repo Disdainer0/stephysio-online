@@ -41,11 +41,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-primary-foreground/10 my-8" />
-
         {/* Bottom */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/50">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mt-8 text-sm text-primary-foreground/50">
           <p>© {currentYear} Stephysio s. r. o. Všetky práva vyhradené.</p>
           <p>Odborná fyzioterapia v Košiciach</p>
           <p>

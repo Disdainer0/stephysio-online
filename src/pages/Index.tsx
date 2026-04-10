@@ -4,7 +4,6 @@ import Problems from "@/components/Problems";
 import Testimonials from "@/components/Testimonials";
 import About from "@/components/About";
 import Team from "@/components/Team";
-import SectionDivider from "@/components/SectionDivider";
 import Courses from "@/components/Courses";
 import Services from "@/components/Services";
 import Methods from "@/components/Methods";
@@ -22,14 +21,11 @@ const Index = () => {
       <main className="relative z-10">
         <Hero />
         <Problems />
-        <SectionDivider />
         <Testimonials />
         <About />
         <Team />
-        <SectionDivider />
         <Courses />
         <Services />
-        <SectionDivider />
         <Methods />
         <BookingForm />
         <OpeningHours />

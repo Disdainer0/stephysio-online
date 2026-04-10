@@ -92,7 +92,7 @@ const Testimonials = () => {
 
                 <p className="text-muted-foreground leading-relaxed text-[15px] mb-6">{review.text}</p>
 
-                <div className="mt-auto pt-4 border-t border-border/60 flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="mt-auto pt-4 flex items-center gap-2 text-sm text-muted-foreground">
                   <span
                     className="w-5 h-5 rounded-full bg-primary/10 text-primary text-xs font-semibold flex items-center justify-center"
                     aria-hidden="true"
