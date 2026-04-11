@@ -73,11 +73,16 @@ const Problems = () => {
               Špecializované prístupy
             </h3>
             <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-              Využívame aj viscerálnu manipuláciu na uvoľnenie napätia medzi orgánmi a zlepšenie ich pohyblivosti.
-              Pomáha pri trávení (zápcha, reflux, nafukovanie), po operáciách, gynekologických bolestiach a bolestiach chrbtice či kĺbov.
+              V terapii využívame aj špecializované prístupy ako napríklad viscerálnu manipuláciu, ktorá sa zameriava na uvoľnenie
+              napätia medzi orgánmi, obmedzení pohyblivosti vnútorných orgánov.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              Je vhodná pri problémoch v trávení (zápcha, reflux, nafukovanie), po operáciách brucha, dutiny, gynekologických
+              ťažkostiach, bolestiach chrbta, kĺbov...
             </p>
             <p className="text-foreground/90 font-medium mb-8">
-              Cieľom terapie je nájsť príčinu problému a vrátiť vás k životu bez bolesti.
+              Cieľom každej terapie je nájsť príčinu problému, zlepšiť pohyb a stabilitu tela a pomôcť vám vrátiť sa k bežnému
+              životu bez bolesti.
             </p>
             <a href="#objednat" className="btn-primary inline-flex items-center justify-center">
               Objednať sa na terapiu
